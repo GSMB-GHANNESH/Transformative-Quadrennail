@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Emotional Tracking</title>
+<style>
+    body {
+        background: linear-gradient(to right, #1e3c72, #2a5298); 
+        color: #ffffff;
+        margin: 0;
+        padding: 0;
+    }
+
+    h2 {
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    form {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.05);
+        border-radius: 15px;
+    }
+
+    div {
+        margin: 15px 0;
+        padding: 12px 15px;
+        border: 1px solid #ffffff;
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.1);
+        display: flex;
+        flex-direction: column;
+    }
+
+    label {
+        margin-bottom: 8px;
+        font-weight: 500;
+    }
+
+    select {
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        font-size: 1em;
+    }
+
+    button {
+        display: block;
+        margin: 30px auto 0 auto;
+        padding: 15px 40px;
+        font-size: 1em;
+        font-weight: bold;
+        border: none;
+        border-radius: 8px;
+        background-color: #00bcd4;
+        color: white;
+        transition: background-color 0.3s ease;
+        margin-bottom: 20px;
+    }
+
+    button:hover {
+        background-color: #0097a7;
+    }
+</style>
+</head>
+<body>
+<h2 align="center"> Analyze Your Day</h2>
+<form>
+    <div>
+    <label>How many hours did you spend studying or working today?</label>
+    <select id="q1">
+        <option value="3">More than 5 hours</option>
+        <option value="2">3-5 hours</option>
+        <option value="1">1-2 hours</option>
+        <option value="0">Less than 1 hour</option>
+    </select><br>
+    </div>
+    <div>
+    <label>Did you complete any important tasks or goals you planned for today?</label>
+    <select id="q2">
+        <option value="3">Yes, all of them</option>
+        <option value="2">Most of them</option>
+        <option value="1">Just a few</option>
+        <option value="0">None</option>
+    </select><br>
+    </div>
+    <div>
+    <label>How often did you get distracted while working?</label>
+    <select id="q3">
+        <option value="3">Rarely</option>
+        <option value="2">Sometimes</option>
+        <option value="1">Often</option>
+        <option value="0">Constantly</option>
+    </select><br>
+    </div>
+    <div>
+    <label>How satisified do you feel with what you acheived today?</label>
+    <select id="q4">
+        <option value="3">Very Satisified</option>
+        <option value="2">Somewhat Satisified</option>
+        <option value="1">Slightly Satisified</option>
+        <option value="0">Not Satisified at all</option>
+    </select><br>
+    </div>
+    <div>
+    <label>How much of your day was spent on entertainment or relaxation?</label>
+    <select id="q5">
+        <option value="3">Less than 2 hours</option>
+        <option value="2">2-4 Hours</option>
+        <option value="1">4-6 Hours</option>
+        <option value="0">More than 6 hours</option>
+    </select><br>
+    </div>
+    <div>
+    <label>Did you learn or practice anything new today?</label>
+    <select id="q6">
+        <option value="3">Yes, a lot</option>
+        <option value="2">A little</option>
+        <option value="1">Just revised old stuff</option>
+        <option value="0">Not really</option>
+    </select><br>
+    </div>
+    <div>
+    <label>How structured was your day?</label>
+    <select id="q7">
+        <option value="3">Followed a clear plan</option>
+        <option value="2">Had a rough plan</option>
+        <option value="1">Went with the flow</option>
+        <option value="0">No structure at all</option>
+    </select><br>
+    </div>
+    <div>
+    <label>What best describes your productivity today?</label>
+    <select id="q8">
+        <option value="3">Super focused and efficient</option>
+        <option value="2">Productive with some breaks</option>
+        <option value="1">Tried but got distracted</option>
+        <option value="0">Barely did anything</option>
+    </select><br>
+    </div>
+    <div>
+    <label>Did you work on something that brings you closer to your long-term goals?</label>
+    <select id="q9">
+        <option value="3">Yes, definitely</option>
+        <option value="2">To some extent</option>
+        <option value="1">Not really</option>
+        <option value="0">Didn't think about it</option>
+    </select><br>
+    </div>
+    <div>
+    <label>If you had to repeat this day, what would you change?</label>
+    <select id="q10">
+        <option value="3">Nothing, it was a solid day</option>
+        <option value="2">A few time-wasting habits</option>
+        <option value="1">Start earlier or plan better</option>
+        <option value="0">Everything - I wasted the day</option>
+    </select>
+    </div>
+</form>
+<button onclick="DayAnalyser()">Analyze Your Day</button>
+<script type="text/javascript">
+function DayAnalyser(){
+    const q1 = document.getElementById("q1");
+    const q1Value = q1.value;
+    let a1 = Number(q1Value);
+
+    const q2 = document.getElementById("q2");
+    const q2Value = q2.value;
+    let a2 = Number(q2Value);
+
+    const q3 = document.getElementById("q3");
+    const q3Value = q3.value;
+    let a3 = Number(q3Value);
+
+    const q4 = document.getElementById("q4");
+    const q4Value = q4.value;
+    let a4 = Number(q4Value);
+
+    const q5 = document.getElementById("q5");
+    const q5Value = q5.value;
+    let a5 = Number(q5Value);
+
+    const q6 = document.getElementById("q6");
+    const q6Value = q6.value;
+    let a6 = Number(q6Value);
+
+
+    const q7 = document.getElementById("q7");
+    const q7Value = q7.value;
+    let a7 = Number(q7Value);
+
+
+    const q8 = document.getElementById("q8");
+    const q8Value = q8.value;
+    let a8 = Number(q8Value);
+
+
+    const q9 = document.getElementById("q9");
+    const q9Value = q9.value;
+    let a9 = Number(q9Value);
+
+
+    const q10 = document.getElementById("q10");
+    const q10Value = q10.value;
+    let a10 = Number(q10Value);
+
+
+    const total = a1+a2+a3+a4+a5+a6+a7+a8+a9+a10;
+
+if(total>=25 && total<=30)
+{
+alert("Super Productive Day!  You were focused, disciplined, and got a lot done. Keep it up!");
+}
+else if(total>=18 && total<=24)
+{
+alert("Balanced Day!  You had a decent mix of work and rest. Not bad, but could improve!");
+}
+else if(total>=10 && total<=17)
+{
+alert("Mostly relaxed Day! You did a little, but there was a lot of time spent chilling. Be careful not to fall behind");
+}
+else{
+    alert("Unproductive Day!  Hey, it's okay to rest once in a while, but make sure it does't become a habit. Rest and go again tomorrow.");
+}
+}
+</script>
+</body>
+</html>

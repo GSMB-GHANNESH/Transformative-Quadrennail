@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <Title>Transformative Quadrenial</Title>
+        <style>
+          *{
+            margin: 0;
+            }
+            .toplogos{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .leftmiddle{
+                display: flex;
+                justify-content: left;
+                align-items: left;
+                flex-direction: column;
+            }
+            .center{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .centerportion {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+            }
+            .rightmiddle{
+                display: flex;
+                justify-content: flex-end;
+                flex-direction: column;
+            }
+            .downlogos{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .transformations{
+                display:flex;
+                flex-direction: row;
+            }
+        img:hover {
+            transform: scale(1.05);
+        }
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+       }
+    }
+    .slogan{
+        display: flex;
+        flex-direction: row;
+
+    }
+    .video {
+    position:absolute;
+    z-index:-1;
+    top:30;
+    width:100%; 
+    height:120%;
+    object-fit: cover;
+    }
+    div.scroll-container {
+        background: linear-gradient(#08001f,#30197d);
+        overflow: auto;
+        white-space: nowrap;
+        padding: 10px;
+    }
+
+    div.scroll-container img {
+        padding: 10px;
+    }
+    .hero{
+            width:100%;
+            min-height:20vh;
+            color:#fff;
+            position:relative;
+    }
+        .container{
+            width:450px;
+            height:100px;
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%,-50%);
+        }
+        .clock{
+            width:100%;
+            height: 100%;
+            background: rgba(235,0,255,0.11);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(40px);
+        }
+        .clock span{
+                font-size:80px;
+                width:110px;
+                display:inline-block;
+                text-align: center;
+                position: relative;
+            }
+            .clock span::after{
+            font-size:16px;
+            position : absolute;
+            bottom:-5px;
+            left:50%;
+            transform:translate(-50%);          
+         }
+        #hrs::after{
+            content:'HOURS';
+        }
+        #min::after{
+            content:'MINUTES';
+         }
+         #sec::after{
+            content:'SECONDS';
+         }
+         .important{
+            display: flex;
+            flex-direction: row;
+         }
+         .footer{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 20px;
+
+         }
+         .orbit-feature {
+  padding: 2rem;
+
+}
+
+.orbit-container {
+background: linear-gradient(45deg,#08001f,#30197d);
+  position: relative;
+  width: 100%;
+  height: 400px;
+}
+
+.orbit-item {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.orbit-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+  </style>
+    </head>
+    <body style="background: linear-gradient(45deg,#08001f,#30197d);"class="body">
+        <script>
+            var a = prompt("Can you please enter your name");
+        </script>
+        <div style="margin-bottom: 30px;">
+        <header  style="margin-bottom: 20px;">
+            <p style="text-align: center;color:yellow; font-size:50px;font-family: cursive; " id="welcome"></p>
+            <script>
+                let c = document.getElementById("welcome")
+                c.textContent = `Welcome to Transformative Quadrenial, ${a}!`;
+            </script>
+            <div class="slogan">
+            <p align="center" style="color: white;font-size: 23px; margin-left: 170px;">Transform Your BTech Journey with Us!</p>
+            <p align="center" style="color: white; margin-left: 80px;font-size: 23px;">From Freshman to Professional: A 4-Year Evolution.</p>
+            </div>
+        </header>
+        </div>
+        <div>
+            <video autoplay muted loop class="video">
+                <source src="Transformation.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="toplogos">
+            <div class="top"> <a href="Mcp.html"><img src="carrer_pathways.jpg" style="height: 150px ; width: 150px; margin-right: 15px; border:5px solid black; "></a></div>
+            <div class="top"><a href="gctafs.html" ><img src="call_action_for_students.jpg" style="height: 150px ; width: 150px; margin-left: 15px; border:5px solid black; "></a></div>
+        </div>
+        <div class="centerportion"> 
+        <div>
+        <div><a href="Mpk.html"><img src="emphasize_practical_knowledge.jpg" style="height: 150px ; width: 150px; margin-bottom: 15px; border:5px solid black; "></a></div>
+        <div> <img src="inclusive_design.jpg" style="height: 150px ; width: 150px; margin-top: 15px; border:5px solid black; "></div>
+        </div>
+        <div class="center"><a href="Transformative_Quadrannial.html"><img src="weblogo1.jpg" style="height: 350px ; width: 350px; margin:5px; border:5px solid black; "></a></div>
+        <div class="rightmiddle">
+        <div><a href="Pindex1.html"><img src="industry_experts_insights.jpg" style="height: 150px ; width: 150px; margin-bottom: 15px; border:5px solid black; "></a></div>
+        <div><img src="integration_with_sdg.jpg" style="height: 150px ; width: 150px; margin-top: 15px; border:5px solid black; "></div>
+        </div>
+        </div>
+        <div class="downlogos" style="margin-bottom: 20px;">
+        <div class="down"><a href="GJMT.html"> <img src="job_market_trends.jpg" style="height: 150px ; width: 150px;margin-right: 15px; border:5px solid black; "></a></div>
+        <div class="down"><a href="PIndex2.html"><img src="year_wise_plans.jpg" style="height: 150px ; width: 150px; margin-left: 15px; border:5px solid black; "></a></div>
+        </div>
+        <h1 align="center" style="color:white">Current Time</h1>
+        <div>
+            <div class="hero">
+                <div class="container">
+                    <div class="clock">
+                        <span id="hrs">00</span>
+                        <span>:</span>
+                        <span id="min">00</span>
+                        <span>:</span>
+                        <span id="sec">00</span>
+                    </div>
+                </div>
+            </div>
+            <script>
+                let hrs = document.getElementById("hrs");
+                let min = document.getElementById("min");
+                let sec = document.getElementById("sec");
+                setInterval(()=>{
+                let currentTime = new Date();
+                hrs.innerHTML = currentTime.getHours();
+                min.innerHTML = currentTime.getMinutes();
+                sec.innerHTML = currentTime.getSeconds();
+                },1000)
+            </script>
+            <h1 align="center" style="color:white">Lost time is never found again</h1>
+            </div>
+        <h1  align="center" style="color:greenyellow; padding: 15px; font-size: 45px;"><b>What can you expect from this student friendly platform ?</b></h1>
+        <div class="info" style="border : 2px solid black; margin:5px ; border-radius:15px; background-color: #FFFDD0;">
+        <h2  align="center" style="background-color:#FDFD96;" >Carrer Pathways</h2>
+        <h3 align="center" >You can explore the different carrer options available after the B.Tech. If you are not having any idea 
+            about what jobs would be there, which type of opportunities will be available and what to learn to acquire them
+            will be found here </h3>
+        </div>
+        <div class="info"  style="background-color:#FDFD96; border : 2px solid black; margin-left: 200px ; border-radius:15px">
+        <h2 align="center" style="background-color: #FFFDD0;" >Industry Expert Insights</h2>
+        <h3 align="center" >If you want to know what industry is expecting from you after the four years of graduation you can explore here.
+            By knowing what induistry needs you can be well prepared for the job industry so that you wont face any issues while 
+            placements
+        </h3>
+        </div>
+        <div class="info" style=" border-radius : 15px ;border: 2px solid black; margin:5px ;margin-right: 200px; background-color: #FFFACD;">
+            <h2 align="center" style="background-color:#FDFD96;" >Job Market Trends</h2>
+            <h3 align="center" >In the coming future job roles, job opportunities and working style and action of people towards 
+                real world problems will change entirely. If you want to know how the jobs and careers are going to 
+                change in future, this place will help you.
+            </h3>
+            </div>
+            <div class="info"  style="background-color:#FDFD96; border-radius: 20px; border : 2px solid black; margin-left: 200px; margin-bottom: 5px;">
+            <h2 align="center" style="background-color: #FFFDD0;" >Emphasizing practical knowledge</h2>
+            <h3 align="center" >Practical knowledge is the crucial skill that every engineering student must acquire in these 
+                    four years os span. Now a days to solve complex world problems it will help the students alot. To
+                    know more about emphasizing practical knowledge you can read here.
+            </h3>
+            </div>
+            <div class="info" style="border-radius: 20px; border : 2px solid black; margin-right:200px ; border-radius:15px;  margin-bottom: 5px;background-color: #FFFACD;">
+            <h2 align="center" style="background-color:#FDFD96;" >Integration of Sustainable development goals</h2>
+            <h3 align="center" >Now a days many organizations and countries are trying to reach the 17 sustainable goals. Here 
+                        in this website you will know the importance of how integration of SDG goals is necessary for project 
+                        buikding. It will also one of the key area that students should be aware. 
+            </h3>
+            </div>
+            <div class="info"  style="background-color:#FDFD96; border : 2px solid black; margin-left:200px ; border-radius:15px; margin-bottom: 5px;">
+            <h2 align="center" style="background-color: #FFFDD0;">Call-To-Action</h2>
+            <h3 align="center" >Along with education, students do lot of mistakes. These small mistakes make them 
+                to stay away from success after four years. Even some harsh decisions wil spoil the 
+                students the students entire life.  This page will help you to know the places where you
+                will be failed and  things which drag you down.
+            </h3>
+            </div>
+            <div class="info"  style="border : 2px solid black; margin-right:200px ; border-radius:15px;  margin-bottom: 5px; background-color:#FFFDD0;;">
+            <h2 align="center" style="background-color:#FDFD96;" >Inclusive design along with motivation section</h2>
+            <h3 align="center" >Many students suffer after joing into some random colleges. They dream about IIT's and some other
+            best institutes. But finally end up in some college where their economical and ethical standards suits them.
+            To make all your myths about colleges this place will help you alot.
+            </div>
+            <div class="info"  style="background-color:#FDFD96;; margin-bottom: 1px; border : 2px solid black; margin:5px ; border-radius:15px;  margin-bottom: 5px;">
+            <h2 align="center" style="background-color: #FFFDD0;">Year wise plans</h2>
+            <h3 align="center" >Are you aspiring to getting into your dream jobs, but you do not know what to do and how to do,
+            then this page will help you with the year wise guidance so that you can achieve your desired goal 
+            at the end of four years.
+            </h3>
+            </div>
+     
+<div class="orbit-feature">
+    <div class="orbit-container" id="orbit">
+      <a href="https://example.com/1" class="orbit-item"><img src="quiz.jpg" alt="1"></a>
+      <a href="https://example.com/2" class="orbit-item"><img src="todolist.jpg" alt="2"></a>
+      <a href="https://example.com/3" class="orbit-item"><img src="toolbox.jpg" alt="3"></a>
+      <a href="https://example.com/4" class="orbit-item"><img src="rateus.jpg" alt="4"></a>
+      <a href="VideoCall.html" class="orbit-item"><img src="videointeraction.jpg" alt="5"></a>
+      <a href="DayAnalyzer.html" class="orbit-item"><img src="reviewday.jpg" alt="6"></a>
+      <a href="https://example.com/7" class="orbit-item"><img src="rateus.jpg" alt="7"></a>
+      <a href="https://example.com/8" class="orbit-item"><img src="memes.jpg" alt="8"></a>
+    </div>
+  </div>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const orbit = document.getElementById("orbit");
+      const items = orbit.querySelectorAll(".orbit-item");
+  
+      const boxWidth = 1100;
+      const boxHeight = 300;
+      const speed = 1;
+      let isPaused = false;
+  
+      const path = [];
+      const padding = 20;
+      const w = boxWidth - 60 - padding * 2;
+      const h = boxHeight - 60 - padding * 2;
+  
+      for (let x = 0; x <= w; x += speed) path.push({ x: padding + x, y: padding });
+      for (let y = 0; y <= h; y += speed) path.push({ x: padding + w, y: padding + y });
+      for (let x = w; x >= 0; x -= speed) path.push({ x: padding + x, y: padding + h });
+      for (let y = h; y >= 0; y -= speed) path.push({ x: padding, y: padding + y });
+  
+      const totalPoints = path.length;
+      const spacing = Math.floor(totalPoints / items.length);
+      const offsets = Array.from(items).map((_, i) => i * spacing);
+      let frame = 0;
+  
+      function animate() {
+        if (!isPaused) {
+          offsets.forEach((offset, i) => {
+            const index = (offset + frame) % totalPoints;
+            const { x, y } = path[index];
+            items[i].style.transform = `translate(${x}px, ${y}px)`;
+          });
+          frame++;
+        }
+        requestAnimationFrame(animate);
+      }
+  
+      orbit.addEventListener("mouseover", () => isPaused = true);
+      orbit.addEventListener("mouseout", () => isPaused = false);
+  
+      animate();
+    });
+  </script>
+  
+    <div class="transformations">
+        <img src="transformation1.jpg" alt="transformation1" width="48%" style="margin-right: 10px; margin-left: 20px;" >
+        <img src="transformation2.jpg" alt="transformation2" width="48%">
+    </div>
+<h1 style="margin: 20px; border: 2px solid black; background-color:#FFD166" align="center"> OUR VISION </h1>
+<p align="center" style="color: white;"><b> We are ambitious and aspirational to make all the B.Tech students to acheive their goals in the four year time.</b></p>
+<p align="center" style="color: white;"><b> We are clear with the targets and ideas that will be applicable to all the students of B.Tech</b></p>
+<h1 style="margin: 20px; border: 2px solid black;  background-color:#FFD166" align="center">OUR MISSION </h1>
+<p align="center" style="color: white;"><b> Striving to provide the best possible stastics to the students so that they ensures their intellectual
+ development and prepares them for life after B.Tech</b></p>
+ <p align="center" style="color: white;"><b> providing accurate information that nurtures students curiosity aligned with their dreams.</b></p>
+ <div class="scroll-container" style="margin-top: 10px;">
+    <img src="quoto4.jpg"  style="height: 100px; width:600px">
+    <img src="quoto2.jpg" style="height: 100px; width:600px">
+    <img src="quoto1.jpg" style="height: 100px; width:600px">
+    <img src="quoto3.jpg" style="height: 100px; width:600px">
+    <img src="quoto5.jpg" style="height: 100px; width:600px">
+    </div>
+</body>
+<footer>
+    <div class="footer">
+    <div>
+        <img src="edu" style="width: 350px; height: 350px;">
+    </div>
+    <div style="color: white;text-align: center; padding: 20px; font-size: 15px;" >
+        <p> "The expert in anything was once a beginner." <br> – Helen Hayes</p><br>
+        <p>"It’s not that I’m so smart, it’s just that I stay with problems longer."<br> – Albert Einstein</p><br>
+        <p>"Success in engineering starts with curiosity and the courage to learn something new every day."</p><br>
+        <p>"Don’t be afraid to fail. Be afraid not to try. Your engineering journey is just beginning."</p><br>
+        <p>"Your degree is just a piece of paper; your knowledge and skills will open doors."</p><br>
+        <p>"Engineering is not about perfect solutions. It’s about doing the best you can with limited resources."<br> – Randy Pausch</p><br>
+        <p>"Success in engineering starts with curiosity and the courage to learn something new every day."</p>
+    </div>
+    <div  style="color: white;">
+        <p>✉️ Email: Transformativequadrenial@gmail.com</p><br>
+        <br>
+        <h3> Need carrer Counclling ? </h3>
+        <p>Contact </p>
+        <br>
+        <p> YASHASWINI </p>
+        <p>📞 Phone: +91 9063502532</p>
+        <br>
+        <p> PRANAV </p>
+        <p>📞 Phone: +91 7587060360</p>
+        <br>
+        <P> MANASWANI</P>
+        <p>📞 Phone: +91 9848181098</p>
+        <br>
+        <p> MANIDEEP </p>
+        <p>📞 Phone: +91 6281044095</p>
+    </div>
+    </div>
+    <div style="display: flex; justify-content: space-between; margin-left: 50px; margin-right: 50px;">
+        <a href="PSubIndex2_1.html" style="color: white;" > Artificial intelligence</a>
+        <a href="PSubIndex2_2.html" style="color: white;" > Cybersecurity</a>
+        <a href="PSubIndex2_3.html" style="color: white;" > Data Analyst</a>
+        <a href="PSubIndex2_4.html" style="color: white;" > Freelancing</a>
+        <a href="PSubIndex2_5.html" style="color: white;" > Application Development</a>
+        <a href="PSubIndex2_6.html" style="color: white;" > Software Development</a>
+    </div>
+    <div align="center" style="color: white; padding: 10px; margin-bottom: 10px; font-size: 15px; margin-top: 20px;" > <p>©Transformative Quadranial  2025. All rights reserved.</p></div>
+</footer>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Videocall</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #1e3c72, #2a5298); 
+      text-align: center;
+      padding: 40px;
+    }
+
+    h2 {
+      color:white;
+    }
+
+    select, button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin: 10px;
+    }
+
+    #video-container {
+      margin-top: 30px;
+      width: 90%;
+      max-width: 800px;
+      height: 500px;
+      margin-left: auto;
+      margin-right: auto;
+      display: none;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 12px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Start a Video Call</h2>
+
+  <p>Select a person to call:</p>
+  <select id="contactSelect">
+    <option value="Friend">Friend</option>
+    <option value="Faculty">Faculty</option>
+    <option value="Parents">Parents</option>
+    <option value="others">others</option>
+  </select>
+
+  <button onclick="startCall()">Start Call</button>
+
+  <div id="video-container">
+    <iframe id="jitsiFrame" allow="camera; microphone; fullscreen; display-capture"></iframe>
+  </div>
+
+  <script>
+    function startCall() {
+      const contact = document.getElementById("contactSelect").value;
+      const roomName = `TransformativeQuadrinal_${contact}_${Date.now()}`; 
+      const jitsiURL = `https://meet.jit.si/${roomName}`;
+
+      document.getElementById("jitsiFrame").src = jitsiURL;
+      document.getElementById("video-container").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
