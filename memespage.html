@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SVG Meme House with Images</title>
+  <style>
+   body {
+  background-image: url('https://i.pinimg.com/736x/d0/2d/ac/d02dacb5b529f80822270bf36bc5e36a.jpg');
+  background-attachment: fixed;
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  font-family: 'Comic Sans MS', cursive;
+  text-align: center;
+  background-color: #f0f8ff;
+  margin: 0;
+  padding: 0;
+}
+    svg {
+      margin-top: 20px;
+      transition: transform 0.3s ease;
+    }
+    svg:hover {
+      transform: scale(1.05);
+    }
+
+    .meme-box {
+      margin-top: 20px;
+      display: none;
+      font-size: 18px;
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      width: 60%;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      animation: fadeIn 0.5s ease-in;
+    }
+
+    .meme-box button {
+      background-color: #ffa07a;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .meme-box button:hover {
+      background-color: #cd5c5c;
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    rect {
+      transition: transform 0.3s ease, fill 0.3s ease;
+    }
+
+    rect:active {
+      transform: scale(1);
+      fill: #ffa07a;
+    }
+    
+    .door {
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .door:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    }
+
+  
+    .window {
+      transition: transform 0.3s ease, opacity 0.3s ease;
+      background-size: cover;
+      background-position: center;
+      display: inline-block;
+      width: 60px;
+      height: 60px;
+      border-radius: 5px;
+      border: 2px solid #8b4513;
+      cursor: pointer;
+    }
+    
+  </style>
+</head>
+<body>
+  <h1>SVG Meme House with Interactive Images</h1>
+
+ 
+  <svg width="600" height="600" viewBox="0 0 600 600">
+    
+    <polygon points="100,200 300,50 500,200" fill="#cd5c5c"/>
+
+   
+    <rect x="100" y="200" width="400" height="350" fill="#f5deb3" stroke="#8b4513" stroke-width="8" rx="10" />
+
+    
+    <rect x="130" y="220" width="60" height="60" fill="#ffcccb" class="window" onclick="generateMemes('happy')" style="background-image: url('happy-meme.jpg');" />
+    <text x="160" y="270" font-family="Arial" font-size="14" fill="black" text-anchor="middle" alignment-baseline="middle">Happy</text>
+
+    <rect x="230" y="220" width="60" height="60" fill="#6495ed" class="window" onclick="generateMemes('tired')" style="background-image: url('tired-meme.jpg');" />
+    <text x="260" y="270" font-family="Arial" font-size="14" fill="black" text-anchor="middle" alignment-baseline="middle">Tired</text>
+
+    <rect x="310" y="220" width="60" height="60" fill="#90ee90" class="window" onclick="generateMemes('motivated')" style="background-image: url('motivated-meme.jpg');" />
+    <text x="340" y="270" font-family="Arial" font-size="14" fill="black" text-anchor="middle" alignment-baseline="middle">Motivated</text>
+
+    <rect x="410" y="220" width="60" height="60" fill="#ffa07a" class="window" onclick="generateMemes('stressed')" style="background-image: url('stressed-meme.jpg');" />
+    <text x="440" y="270" font-family="Arial" font-size="14" fill="black" text-anchor="middle" alignment-baseline="middle">Stressed</text>
+
+    <rect x="130" y="310" width="60" height="60" fill="#ffb6c1" class="window" onclick="generateMemes('anxious')" style="background-image: url('anxious-meme.jpg');" />
+    <text x="160" y="360" font-family="Arial" font-size="14" fill="black" text-anchor="middle" alignment-baseline="middle">Anxious</text>
+
+    <rect x="230" y="310" width="60" height="60" fill="#d8bfd8" class="window" onclick="generateMemes('confused')" style="background-image: url('confused-meme.jpg');" />
+    <text x="260" y="360" font-family="Arial" font-size="14" fill="black" text-anchor="middle" alignment-baseline="middle">Confused</text>
+
+    <rect x="310" y="310" width="60" height="60" fill="#ffdab9" class="window" onclick="generateMemes('curious')" style="background-image: url('curious-meme.jpg');" />
+    <text x="340" y="360" font-family="Arial" font-size="14" fill="black" text-anchor="middle" alignment-baseline="middle">Curious</text>
+
+    <rect x="410" y="310" width="60" height="60" fill="#98fb98" class="window" onclick="generateMemes('proud')" style="background-image: url('proud-meme.jpg');" />
+    <text x="440" y="360" font-family="Arial" font-size="14" fill="black" text-anchor="middle" alignment-baseline="middle">Proud</text>
+
+    <rect x="190" y="400" width="60" height="60" fill="#afeeee" class="window" onclick="generateMemes('bored')" style="background-image: url('bored-meme.jpg');" />
+    <text x="220" y="450" font-family="Arial" font-size="14" fill="black" text-anchor="middle" alignment-baseline="middle">Bored</text>
+
+    <rect x="350" y="400" width="60" height="60" fill="#f0e68c" class="window" onclick="generateMemes('creative')" style="background-image: url('creative-meme.jpg');" />
+    <text x="380" y="450" font-family="Arial" font-size="14" fill="black" text-anchor="middle" alignment-baseline="middle">Creative</text>
+    <rect x="265" y="430" width="70" height="120" fill="#8b4513" rx="5" class="door" />
+  </svg>
+
+  <div class="meme-box" id="memeDisplay">
+    <p id="memeText"></p>
+    <button onclick="resetMeme()">Reset</button>
+  </div>
+
+  <script>
+    const memes = {
+      happy: [
+        "When you finally understand the material you've been struggling with. 🎉",
+        "My face when the prof cancels the final exam. 🥳"
+      ],
+      tired: [
+        "Me reading the same line 10 times at 2am. 😴"
+      ],
+      motivated: [
+        "That rush of motivation when the deadline hits. 🚀"
+      ],
+      stressed: [
+        "Chat gpt free version complete!! 📈😰"
+      ],
+      anxious: [
+        "When the prof says 'See me after class'. 😬"
+      ],
+      confused: [
+        "To use which AI tools to complete given assignments , tasks and ppt 🧠❓"
+      ],
+      curious: [
+        "One search = rabbit hole for 4 hours. 🕳"
+      ],
+      proud: [
+        "When the hello world program is executed successfully 🧠✨"
+      ],
+      bored: [
+        "Lecture.mp4 running at 0.25x speed in real life. 😐"
+      ],
+      creative: [
+        "Me making memes instead of notes. 🎨📚"
+      ]
+    };
+
+    function generateMemes(mood) {
+      const display = document.getElementById("memeDisplay");
+      const text = document.getElementById("memeText");
+      const options = memes[mood];
+      text.innerText = options[Math.floor(Math.random() * options.length)];
+      display.style.display = "block";
+    }
+
+    function resetMeme() {
+      document.getElementById("memeDisplay").style.display = "none";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.ticker-wrapper {
+  width: 100%;
+  overflow-x: scroll;
+  white-space: nowrap;
+  background: #f0f0f0;
+  cursor: grab;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Firefox */
+}
+
+.ticker-wrapper::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+.ticker-content {
+  display: inline-flex;
+  animation: scroll-left 60s linear infinite;
+}
+
+.ticker-wrapper:hover .ticker-content {
+  animation-play-state: paused;
+}
+
+.button-set {
+  display: inline-flex;
+}
+
+.ticker-btn {
+  margin: 0 10px;
+  padding: 8px 16px;
+  background-color: #2a0493;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background 0.3s;
+  white-space: nowrap;
+}
+
+.ticker-btn:hover {
+  background-color: #005fcc;
+}
+
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+    </style>
+   
+</head>
+<body>
+    <div class="ticker-wrapper" id="ticker">
+        <div class="ticker-content" id="ticker-content">
+          <div class="button-set" id="button-set">
+            <a href="index.html"><button class="ticker-btn">HOME</button></a>
+            <a href="Mcp.html"><button class="ticker-btn">Career Paths</button></a>
+            <a href="gctafs.html"><button class="ticker-btn">Call To Action</button></a>
+            <a href="Pindex1.html"><button class="ticker-btn">Industry Expert Insights</button></a>
+            <a href="research.html"><button class="ticker-btn">Research</button></a>
+            <a href="PIndex2.html"><button class="ticker-btn">Year wise Plans</button></a>
+            <a href="GJMT.html"><button class="ticker-btn">Job Market Trends</button></a>
+            <a href="multipage.html"><button class="ticker-btn">Hall Of Frame</button></a>
+            <a href="Mpk.html"><button class="ticker-btn">Practical Knowledge</button></a>
+            <a href="Transformative_Quadrannial.html"><button class="ticker-btn">Tips & Resources</button></a>
+            <a href="VideoCall.html"><button class="ticker-btn">Video Call</button></a>
+            <a href="quiz.html"><button class="ticker-btn">Carrer Quiz</button></a>
+            <a href="Todolist.html"><button class="ticker-btn">To-Do List</button></a>
+            <a href="DayAnalyzer.html"><button class="ticker-btn">Review Day</button></a>
+            <a href="memespage.html"><button class="ticker-btn">Memes</button></a>
+            <a href="pomodoro.html"><button class="ticker-btn">Pomodoro</button></a>
+            <a href="toolbox.html"><button class="ticker-btn">Study Resources</button></a>
+            <a href="PstudentsTools.html"><button class="ticker-btn">Student Tools</button></a>
+            <a href="PSubIndex2_1.html"><button class="ticker-btn">Artificial Intelligence</button></a>
+            <a href="PSubIndex2_2.html"><button class="ticker-btn">Cybersecurity</button></a>
+            <a href="PSubIndex2_3.html"><button class="ticker-btn">Data Analyst</button></a>
+            <a href="PSubIndex2_4.html"><button class="ticker-btn">Freelancing</button></a>
+            <a href="PSubIndex2_5.html"><button class="ticker-btn">Application Development</button></a>
+            <a href="PSubIndex2_6.html"><button class="ticker-btn">Software Development</button></a>
+            <a href="rateus.html"><button class="ticker-btn">Rate Us</button></a>
+          </div>
+        </div>
+      </div>
+      
+  <script>
+  const ticker = document.getElementById("ticker");
+  const tickerContent = document.getElementById("ticker-content");
+  const buttonSet = document.getElementById("button-set");
+
+  tickerContent.appendChild(buttonSet.cloneNode(true));
+
+
+  let isDragging = false;
+  let startX;
+  let scrollStart;
+
+  ticker.addEventListener("mousedown", (e) => {
+    isDragging = true;
+    startX = e.pageX;
+    scrollStart = ticker.scrollLeft;
+    ticker.style.cursor = "grabbing";
+  });
+
+  ticker.addEventListener("mouseup", () => {
+    isDragging = false;
+    ticker.style.cursor = "grab";
+  });
+
+  ticker.addEventListener("mouseleave", () => {
+    isDragging = false;
+    ticker.style.cursor = "grab";
+  });
+
+  ticker.addEventListener("mousemove", (e) => {
+    if (!isDragging) return;
+    const moveX = e.pageX - startX;
+    ticker.scrollLeft = scrollStart - moveX;
+  });
+</script>
+
+</body>
+</html>

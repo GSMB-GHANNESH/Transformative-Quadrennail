@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Form Validations</title>
+</head>
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("LoginImage.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+.container 
+    {
+    width: 600px; 
+    margin-top:300px;
+    margin-left: 300px;
+    background: rgb(102, 192, 212);
+    padding: 20px;
+    border-radius: 8px;
+    opacity: 0.7;
+    border: 5px solid rgb(5, 5, 93);
+    font-size: 25px;
+    }
+
+    .password-container {
+      position: relative;
+      display: inline-block;
+    }
+    #password {
+      width: 200px;
+      padding-right: 30px; 
+    }
+    #eye-icon {
+      position: absolute;
+      right: 5px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      font-size: 16px;
+    }
+    #strength-bar {
+      width: 200px;
+      height: 10px;
+      border-radius: 5px;
+      background: #e0e0e0;
+      margin-top: 5px;
+      transition: background 0.3s;
+    }
+    #strength-text {
+      font-size: 14px;
+      margin-top: 5px;
+      font-weight: bold;
+    }
+</style>
+<body>
+<div class="container">
+<h2 align="center" style="font-size: 25px; color: blue;"><b>Login with one click to the world of transformation!!</b></h2>
+<form onsubmit="return validateform()">
+<label for="email"><b>Email:</b></label>
+&nbsp&nbsp&nbsp&nbsp&nbsp
+<input type="email" id="email" style="width:225px"><br>
+<label for="phone"><b>Phone:</b></label>
+&nbsp&nbsp&nbsp&nbsp&nbsp
+<input type="tel" id="phone" style="width:225px"><br>
+<label for="password"><b>Password:</b></label>
+<div class="password-container">
+  <input type="password" id="password" oninput="checkPasswordStrength()" />
+  <span id="eye-icon" onclick="togglePasswordVisibility()">👁</span>
+</div>
+<div id="strength-bar" style="margin-left: 180px;"></div>
+<div id="strength-text"></div>
+
+<button type="submit" style="margin-left: 180px; padding: 10px; width: 200px;color:antiquewhite; background-color: blue;"><b>LOGIN</b></button>
+<script>
+    function checkPasswordStrength() {
+      const password = document.getElementById("password").value;
+      const strengthBar = document.getElementById("strength-bar");
+      const strengthText = document.getElementById("strength-text");
+
+      let strength = 0;
+
+      if (password.length >= 8) strength++;
+      if (/[A-Z]/.test(password)) strength++;
+      if (/[a-z]/.test(password)) strength++;
+      if (/\d/.test(password)) strength++;
+      if (/[\W_]/.test(password)) strength++;
+
+      let strengthLevel = "";
+      let gradient = "";
+
+      switch (strength) {
+        case 0:
+        case 1:
+          strengthLevel = "Very Weak";
+          gradient = "linear-gradient(to right, red, #ff9999)";
+          break;
+        case 2:
+          strengthLevel = "Weak";
+          gradient = "linear-gradient(to right, orange, #ffcc99)";
+          break;
+        case 3:
+          strengthLevel = "Moderate";
+          gradient = "linear-gradient(to right, yellow, #ffff99)";
+          break;
+        case 4:
+          strengthLevel = "Strong";
+          gradient = "linear-gradient(to right, limegreen, #ccffcc)";
+          break;
+        case 5:
+          strengthLevel = "Very Strong";
+          gradient = "linear-gradient(to right, green, #a6f5a6)";
+          break;
+      }
+
+      strengthBar.style.background = gradient;
+      strengthText.innerText = strengthLevel;
+    }
+
+    function togglePasswordVisibility() {
+      const passwordField = document.getElementById("password");
+      const eyeIcon = document.getElementById("eye-icon");
+
+      if (passwordField.type === "password") {
+        passwordField.type = "text";
+        eyeIcon.innerText = "🙈"; 
+      } else {
+        passwordField.type = "password";
+        eyeIcon.innerText = "👁"; 
+      }
+    }
+  </script>
+<h3></h3>
+<p id="demo"></p>
+</form>
+</div>
+<script>
+    function validateform() {
+      const email = document.getElementById("email").value.trim();
+      const pass = document.getElementById("password").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const errormsg = document.getElementById("demo");
+    
+      errormsg.innerHTML = ""; 
+      if (!validateEmail(email)) {
+        errormsg.innerHTML = "Enter valid email";
+        return false;
+      }
+      if (!validatePhone(phone)) {
+        errormsg.innerHTML = "Phone number must be exactly 10 digits";
+        return false;
+      }
+      if (!validatePass(pass)) {
+        errormsg.innerHTML = "Password must be at least 8 characters and include uppercase, lowercase, number, and symbol";
+        return false;
+      }
+      window.location.href = "index.html"; 
+      return false; 
+    }
+    
+    function validateEmail(email) {
+      const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return regex.test(email);
+    }
+    
+    function validatePhone(phone) {
+      const regex = /^\d{10}$/;
+      return regex.test(phone);
+    }
+    
+    function validatePass(pass) {
+      const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
+      return regex.test(pass);
+    }
+    </script>
+    
+</body>
+</html>
