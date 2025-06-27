@@ -1,201 +1,59 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title> Emotional Tracking</title>
-<style>
-    body {
-        background: linear-gradient(to right, #1e3c72, #2a5298); 
-        color: #ffffff;
-        margin: 0;
-        padding: 0;
-    }
-
-    h2 {
-        text-align: center;
-        margin: 20px 0;
-    }
-
-    form {
-        max-width: 900px;
-        margin: 0 auto;
-        padding: 20px;
-        background-color: rgba(255, 255, 255, 0.05);
-        border-radius: 15px;
-    }
-
-    div {
-        margin: 15px 0;
-        padding: 12px 15px;
-        border: 1px solid #ffffff;
-        border-radius: 10px;
-        background-color: rgba(255, 255, 255, 0.1);
-        display: flex;
-        flex-direction: column;
-    }
-
-    label {
-        margin-bottom: 8px;
-        font-weight: 500;
-    }
-
-    select {
-        padding: 10px;
-        border-radius: 5px;
-        border: none;
-        font-size: 1em;
-    }
-
-    button {
-        display: block;
-        margin: 30px auto 0 auto;
-        padding: 15px 40px;
-        font-size: 1em;
-        font-weight: bold;
-        border: none;
-        border-radius: 8px;
-        background-color: #00bcd4;
-        color: white;
-        transition: background-color 0.3s ease;
-        margin-bottom: 20px;
-    }
-
-    button:hover {
-        background-color: #0097a7;
-    }
-
-    .ticker-wrapper {
-  width: 100%;
-  height:50px; /* You can adjust this */
-  overflow-x: scroll;
-  white-space: nowrap;
-  cursor: grab;
-  scroll-behavior: smooth;
-  scrollbar-width: none;
-  background: transparent;
-  border: none;
-  outline: none;
-  margin: 0;
-  padding: 0;
-  box-shadow: none;
-}
-.ticker-wrapper::-webkit-scrollbar {
-  display: none; 
-}
-
-.ticker-content {
-  display: inline-flex;
-  flex-direction: row;
-  animation: scroll-left 30s linear infinite;
-  background: transparent;
-  border: none;
-  outline: none;
-}
-
-.ticker-wrapper:hover .ticker-content {
-  animation-play-state: paused;
-}
-
-.button-set {
-  display: inline-flex;
-  flex-direction: row;
-  height:50px;
-}
-
-.ticker-btn {
-  margin: 0 10px;
-  padding: 6px 14px;
-  background-color: #2a0493;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  transition: background 0.3s;
-  white-space: nowrap;
-  display: inline-block;
-  font-size: 14px;
-  outline: none;
-}
-.ticker-btn:hover {
-  background-color: #005fcc;
-}
-
-@keyframes scroll-left {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
-</style>
+    <title>Emotional Tracking</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #1e3c72, #2a5298); 
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+        h2 {
+            text-align: center;
+            margin: 20px 0;
+        }
+        form {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+        }
+        div {
+            margin: 15px 0;
+            padding: 12px 15px;
+            border: 1px solid #ffffff;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.1);
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        select {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            font-size: 1em;
+        }
+        footer {
+            background-color: #11226c;
+            color:rgb(255, 248, 248);
+            padding: 5px;
+            text-align: center;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
-<h2 align="center"> Analyze Your Day</h2>
-<div class="ticker-wrapper" id="ticker">
-    <div class="ticker-content" id="ticker-content">
-      <div class="button-set" id="button-set">
-        <a href="index.html"><button class="ticker-btn">HOME</button></a>
-        <a href="Mcp.html"><button class="ticker-btn">Career Paths</button></a>
-        <a href="gctafs.html"><button class="ticker-btn">Call To Action</button></a>
-        <a href="Pindex1.html"><button class="ticker-btn">Industry Expert Insights</button></a>
-        <a href="research.html"><button class="ticker-btn">Research</button></a>
-        <a href="PIndex2.html"><button class="ticker-btn">Year wise Plans</button></a>
-        <a href="GJMT.html"><button class="ticker-btn">Job Market Trends</button></a>
-        <a href="multipage.html"><button class="ticker-btn">Hall Of Frame</button></a>
-        <a href="Mpk.html"><button class="ticker-btn">Practical Knowledge</button></a>
-        <a href="Transformative_Quadrannial.html"><button class="ticker-btn">Tips & Resources</button></a>
-        <a href="VideoCall.html"><button class="ticker-btn">Video Call</button></a>
-        <a href="quiz.html"><button class="ticker-btn">Carrer Quiz</button></a>
-        <a href="Todolist.html"><button class="ticker-btn">To-Do List</button></a>
-        <a href="DayAnalyzer.html"><button class="ticker-btn">Review Day</button></a>
-        <a href="memespage.html"><button class="ticker-btn">Memes</button></a>
-        <a href="pomodoro.html"><button class="ticker-btn">Pomodoro</button></a>
-        <a href="toolbox.html"><button class="ticker-btn">Study Resources</button></a>
-        <a href="PstudentsTools.html"><button class="ticker-btn">Student Tools</button></a>
-        <a href="PSubIndex2_1.html"><button class="ticker-btn">Artificial Intelligence</button></a>
-        <a href="PSubIndex2_2.html"><button class="ticker-btn">Cybersecurity</button></a>
-        <a href="PSubIndex2_3.html"><button class="ticker-btn">Data Analyst</button></a>
-        <a href="PSubIndex2_4.html"><button class="ticker-btn">Freelancing</button></a>
-        <a href="PSubIndex2_5.html"><button class="ticker-btn">Application Development</button></a>
-        <a href="PSubIndex2_6.html"><button class="ticker-btn">Software Development</button></a>
-        <a href="rateus.html"><button class="ticker-btn">Rate Us</button></a>
-      </div>
-    </div>
-  </div>
-  
-<script>
-const ticker = document.getElementById("ticker");
-const tickerContent = document.getElementById("ticker-content");
-const buttonSet = document.getElementById("button-set");
 
-tickerContent.appendChild(buttonSet.cloneNode(true));
+    <h2 align="center" style="font-size: 40px;">Analyze Your Day</h2>
 
-
-let isDragging = false;
-let startX;
-let scrollStart;
-
-ticker.addEventListener("mousedown", (e) => {
-isDragging = true;
-startX = e.pageX;
-scrollStart = ticker.scrollLeft;
-ticker.style.cursor = "grabbing";
-});
-
-ticker.addEventListener("mouseup", () => {
-isDragging = false;
-ticker.style.cursor = "grab";
-});
-
-ticker.addEventListener("mouseleave", () => {
-isDragging = false;
-ticker.style.cursor = "grab";
-});
-
-ticker.addEventListener("mousemove", (e) => {
-if (!isDragging) return;
-const moveX = e.pageX - startX;
-ticker.scrollLeft = scrollStart - moveX;
-});
-</script>
-
-<form>
+    <form>
     <div>
     <label>How many hours did you spend studying or working today?</label>
     <select id="q1">
@@ -286,73 +144,39 @@ ticker.scrollLeft = scrollStart - moveX;
         <option value="0">Everything - I wasted the day</option>
     </select>
     </div>
-</form>
-<button onclick="DayAnalyser()">Analyze Your Day</button>
-<script type="text/javascript">
-function DayAnalyser(){
-    const q1 = document.getElementById("q1");
-    const q1Value = q1.value;
-    let a1 = Number(q1Value);
+    </form>
 
-    const q2 = document.getElementById("q2");
-    const q2Value = q2.value;
-    let a2 = Number(q2Value);
+    <div style="text-align: center;">
+        <button onclick="DayAnalyser()">Analyze Your Day</button>
+    </div>
 
-    const q3 = document.getElementById("q3");
-    const q3Value = q3.value;
-    let a3 = Number(q3Value);
+    <script>
+        function DayAnalyser() {
+            const total =
+                Number(document.getElementById("q1").value) +
+                Number(document.getElementById("q2").value) +
+                Number(document.getElementById("q3").value) +
+                Number(document.getElementById("q4").value) +
+                Number(document.getElementById("q5").value) +
+                Number(document.getElementById("q6").value) +
+                Number(document.getElementById("q7").value) +
+                Number(document.getElementById("q8").value) +
+                Number(document.getElementById("q9").value) +
+                Number(document.getElementById("q10").value);
 
-    const q4 = document.getElementById("q4");
-    const q4Value = q4.value;
-    let a4 = Number(q4Value);
-
-    const q5 = document.getElementById("q5");
-    const q5Value = q5.value;
-    let a5 = Number(q5Value);
-
-    const q6 = document.getElementById("q6");
-    const q6Value = q6.value;
-    let a6 = Number(q6Value);
-
-
-    const q7 = document.getElementById("q7");
-    const q7Value = q7.value;
-    let a7 = Number(q7Value);
-
-
-    const q8 = document.getElementById("q8");
-    const q8Value = q8.value;
-    let a8 = Number(q8Value);
-
-
-    const q9 = document.getElementById("q9");
-    const q9Value = q9.value;
-    let a9 = Number(q9Value);
-
-
-    const q10 = document.getElementById("q10");
-    const q10Value = q10.value;
-    let a10 = Number(q10Value);
-
-
-    const total = a1+a2+a3+a4+a5+a6+a7+a8+a9+a10;
-
-if(total>=25 && total<=30)
-{
-alert("Super Productive Day!  You were focused, disciplined, and got a lot done. Keep it up!");
-}
-else if(total>=18 && total<=24)
-{
-alert("Balanced Day!  You had a decent mix of work and rest. Not bad, but could improve!");
-}
-else if(total>=10 && total<=17)
-{
-alert("Mostly relaxed Day! You did a little, but there was a lot of time spent chilling. Be careful not to fall behind");
-}
-else{
-    alert("Unproductive Day!  Hey, it's okay to rest once in a while, but make sure it does't become a habit. Rest and go again tomorrow.");
-}
-}
-</script>
+            if (total >= 25 && total <= 30) {
+                alert("Super Productive Day! You were focused, disciplined, and got a lot done. Keep it up!");
+            } else if (total >= 18 && total <= 24) {
+                alert("Balanced Day! You had a decent mix of work and rest. Not bad, but could improve!");
+            } else if (total >= 10 && total <= 17) {
+                alert("Mostly relaxed Day! You did a little, but there was a lot of time spent chilling. Be careful not to fall behind");
+            } else {
+                alert("Unproductive Day! Hey, it's okay to rest once in a while, but make sure it doesn't become a habit. Rest and go again tomorrow.");
+            }
+        }
+    </script>
+<footer>
+            <p> © Transformative Quadrennail 2025</p>
+        </footer>
 </body>
 </html>
